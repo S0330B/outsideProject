@@ -13,9 +13,26 @@ const path = require("path");
 app.get("/", function (req, res) {
   res.render("pages/index");
 });
+const productRouter = require("./modules/product/router");
+app.use("/products", productRouter);
 
-app.listen(3000, async (req, res) => {
-  console.log("App is running on port 3000");
+const featureRouter = require("./modules/feature/router");
+app.use("/features", featureRouter);
+
+const componentRouter = require("./modules/component/router");
+app.use("/components", componentRouter);
+
+const screenRouter = require("./modules/screen/router");
+app.use("/screen", screenRouter);
+
+app.listen(8080, async (req, res) => {
+  console.log("App is running on port 8080");
+  try {
+    await mongoose.connect(
+      "mongodb+srv://admin:admin@cluster0.crjodf1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    );
+    console.log("Database is connected");
+  } catch (e) {
+    console.log(e);
+  }
 });
-
-// express, nodemon, mongoose, cors, moment, dotenv, bcrypt, jsonwebtoken, passport

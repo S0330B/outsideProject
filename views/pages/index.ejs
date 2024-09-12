@@ -43,7 +43,7 @@
       </div>
     </nav>
     <main>
-      <section class="hero-section px-wrapper full-vh relative">
+      <section class="hero-section px-wrapper relative">
         <article
           class="image-area absolute flex top-most left-most full-height full-width"
         >
@@ -52,31 +52,83 @@
         <article
           class="text-area full-height flex column relative justify-center gap-xl"
         >
-          <h1 class="fs-heading hero-title text-white fw-semibold">Title</h1>
+          <h1 class="fs-heading hero-title text-white fw-semibold">
+            <%= COMPONENTS['hero-section'].title %>
+          </h1>
           <p
             class="half-width font-secondary text-white fw-regular fs-xl hero-description"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            <%= COMPONENTS['hero-section'].description %>
           </p>
         </article>
       </section>
       <section class="features-section px-wrapper pt-xl">
-        <h1 class="fs-xxl text-tertiary">Title</h1>
+        <h1 class="fs-xxl text-tertiary">
+          <%= COMPONENTS['feature-section'].title %>
+        </h1>
         <p class="font-secondary paragraph-width">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-          beatae tempora? Explicabo, labore itaque culpa necessitatibus eum,
-          nesciunt ratione, ducimus quaerat suscipit perspiciatis porro. Vel,
-          dignissimos! Repellat provident ratione numquam!
+          <%= COMPONENTS['feature-section'].description %>
         </p>
-        <div class="features flex gap-sm mt-xl pt-xl"></div>
+        <div class="features flex mt-xl pt-xl">
+          <% FEATURES.forEach(feature => { %>
+          <div class="feature">
+            <div class="feature-content">
+              <h3 class="feature-title text-primary"><%= feature.title %></h3>
+              <p class="feature-description"><%= feature.description %></p>
+              <div class="arrow-button mb-sm">
+                <div class="material-icons text-primary">arrow_forward</div>
+              </div>
+            </div>
+            <div class="feature-image">
+              <img
+                src="<%= feature.image %>"
+                alt="<%= feature.title %>"
+                class="feature-image"
+              />
+            </div>
+          </div>
+          <% }); %>
+        </div>
       </section>
       <div class="bg-primary px-wrapper">
         <section class="product-section py-xl text-white">
-          <h1 class="mt-lg mb-sm">Title</h1>
-          <div class="products flex gap-sm"></div>
+          <h1 class="mt-lg mb-sm">
+            <%= COMPONENTS['product-section'].title %>
+          </h1>
+          <div class="products flex">
+            <% PRODUCTS.forEach(product => { %>
+
+            <article class="product">
+              <div
+                id="video-<%= product._id %>"
+                onclick="playVideo('video-<%= product._id %>')"
+                class="product-img pause relative flex justify-center items-center"
+              >
+                <video
+                  src="<%= product.video %>"
+                  alt=""
+                  class="full-width"
+                  preload="metadata"
+                ></video>
+                <div class="play-button absolute">
+                  <span class="material-icons">play_arrow</span>
+                </div>
+                <div class="pause-button absolute">
+                  <span class="material-icons">pause</span>
+                </div>
+              </div>
+              <div class="product-content flex column gap-xs mt-sm">
+                <img
+                  src="<%= product.logo %>"
+                  class="product-logo"
+                  alt="<%= product.title %>"
+                />
+                <h3><%= product.title %></h3>
+                <p class="mt-xs"><%= product.description %></p>
+              </div>
+            </article>
+            <% }); %>
+          </div>
         </section>
         <footer class="flex bg-white px-lg py-xl">
           <div class="footer-col col-6">

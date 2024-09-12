@@ -10,8 +10,25 @@ app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
 const path = require("path");
-app.get("/", function (req, res) {
-  res.render("pages/index");
+
+const featureSchema = require("./modules/feature/schema");
+const productSchema = require("./modules/product/schema");
+const componentSchema = require("./modules/component/schema");
+const ArrayHelper = require("./utils/helpers/array");
+
+app.get("/", async function (req, res) {
+  const [components, features, products] = await Promise.all([
+    componentSchema.find({ screen: "home" }).lean(),
+    featureSchema.find({}).lean(),
+    productSchema.find({}).lean(),
+  ]);
+
+  // console.log(ArrayHelper.convertDataToSectionMap(components));
+  res.render("pages/index", {
+    FEATURES: features,
+    PRODUCTS: products,
+    COMPONENTS: ArrayHelper.convertDataToSectionMap(components),
+  });
 });
 const productRouter = require("./modules/product/router");
 app.use("/products", productRouter);

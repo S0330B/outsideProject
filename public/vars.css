@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --xxs: 4px;
+  --xs: 8px;
+  --sm: 16px;
+  --md: 24px;
+  --lg: 32px;
+  --xl: 40px;
+  --xxl: 48px;
+  --3xl: 64px;
+  --4xl: 80px;
+  --5xl: 96px;
+
+  --wrapper: 12vw;
+  /* minor third typescaling */
+  --fs-xxs: 0.625rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.9rem;
+  --fs-md: 1.08rem;
+  --fs-lg: 1.296rem;
+  --fs-xl: 1.554rem;
+  --fs-xxl: 1.865rem;
+  --fs-xxxl: 2.238rem;
+  --fs-heading: 2.688rem;
+  --primary-font: "Sora", sans-serif;
+  --secondary-font: "Space Mono", monospace;
+
+  /* colors */
+  --primary-color: #065545;
+  --secondary-color: #febf58;
+  --tertiary-color: #012a22;
+
+  --white: white;
+}

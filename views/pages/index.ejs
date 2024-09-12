@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outside</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="vars.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav
+      class="px-xl z1 flex justify-between items-center fixed top-most left-most full-width"
+    >
+      <div class="logo">
+        <img src="./images/logo.png" alt="" />
+      </div>
+      <div class="nav-items flex items-center">
+        <div class="nav-item">About</div>
+        <div class="nav-item">Team</div>
+        <div class="nav-item">Career</div>
+        <div class="nav-item">Contact</div>
+        <div class="close-button fixed top-most right-most pa-sm d-none">
+          <div class="material-icons">close</div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="material-icons">menu</div>
+      </div>
+    </nav>
+    <main>
+      <section class="hero-section px-wrapper full-vh relative">
+        <article
+          class="image-area absolute flex top-most left-most full-height full-width"
+        >
+          <img src="./images/img1.png" class="full-height full-width" alt="" />
+        </article>
+        <article
+          class="text-area full-height flex column relative justify-center gap-xl"
+        >
+          <h1 class="fs-heading hero-title text-white fw-semibold">Title</h1>
+          <p
+            class="half-width font-secondary text-white fw-regular fs-xl hero-description"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </article>
+      </section>
+      <section class="features-section px-wrapper pt-xl">
+        <h1 class="fs-xxl text-tertiary">Title</h1>
+        <p class="font-secondary paragraph-width">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+          beatae tempora? Explicabo, labore itaque culpa necessitatibus eum,
+          nesciunt ratione, ducimus quaerat suscipit perspiciatis porro. Vel,
+          dignissimos! Repellat provident ratione numquam!
+        </p>
+        <div class="features flex gap-sm mt-xl pt-xl"></div>
+      </section>
+      <div class="bg-primary px-wrapper">
+        <section class="product-section py-xl text-white">
+          <h1 class="mt-lg mb-sm">Title</h1>
+          <div class="products flex gap-sm"></div>
+        </section>
+        <footer class="flex bg-white px-lg py-xl">
+          <div class="footer-col col-6">
+            <div class="footer-logo">
+              <img src="./images/logo.png" alt="" />
+            </div>
+            <div class="social-media-icons flex gap-xs">
+              <div class="social-media-icon">
+                <img src="./images/social-media-icons/Icon.svg" alt="" />
+              </div>
+              <div class="social-media-icon">
+                <img src="./images/social-media-icons/Icon-1.svg" alt="" />
+              </div>
+              <div class="social-media-icon">
+                <img src="./images/social-media-icons/Icon-2.svg" alt="" />
+              </div>
+              <div class="social-media-icon">
+                <img src="./images/social-media-icons/Icon-3.svg" alt="" />
+              </div>
+              <div class="social-media-icon">
+                <img src="./images/social-media-icons/Icon-4.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="footer-col col-3">
+            <div class="footer-item px-sm py-xxs text-tertiary">About</div>
+            <div class="footer-item px-sm py-xxs text-tertiary">Impact</div>
+            <div class="footer-item px-sm py-xxs text-tertiary">
+              Our Approach
+            </div>
+            <div class="footer-item px-sm py-xxs text-tertiary">Programs</div>
+          </div>
+          <div class="footer-col col-3">
+            <div class="footer-item px-sm py-xxs text-tertiary">Resources</div>
+            <div class="footer-item px-sm py-xxs text-tertiary">
+              Get Involved
+            </div>
+            <div class="footer-item px-sm py-xxs text-tertiary">Financials</div>
+            <div class="footer-item px-sm py-xxs text-tertiary">Careers</div>
+            <div class="footer-item px-sm py-xxs text-tertiary">Contact</div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>

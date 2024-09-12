@@ -1,0 +1,117 @@
+body {
+  font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.fs-xxs {
+  font-size: var(--fs-xxs);
+}
+.fs-xs {
+  font-size: var(--fs-xs);
+}
+.fs-sm {
+  font-size: var(--fs-sm);
+}
+.fs-md {
+  font-size: var(--fs-md);
+}
+.fs-lg {
+  font-size: var(--fs-lg);
+}
+.fs-xl {
+  font-size: var(--fs-xl);
+}
+.fs-xxl {
+  font-size: var(--fs-xxl);
+}
+.fs-xxxl {
+  font-size: var(--fs-xxxl);
+}
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+/*Font weights*/
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
+/* colors */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-white {
+  background-color: var(--white);
+}
+
+/* Text color utility classes */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-tertiary {
+  color: var(--tertiary-color);
+}
+.text-white {
+  color: var(--white);
+}
+
+/* font-family */
+
+.font-secondary {
+  font-family: var(--secondary-font);
+}
+
+/*  limit lines */
+.two-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

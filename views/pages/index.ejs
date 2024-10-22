@@ -104,6 +104,15 @@
                 onclick="playVideo('video-<%= product._id %>')"
                 class="product-img pause relative flex justify-center items-center"
               >
+                <% if (product.video.includes('.com') ) { %>
+                <iframe
+                  src="<%= product.video %>"
+                  class="full-width"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <% } else { %>
                 <video
                   src="<%= product.video %>"
                   alt=""
@@ -116,6 +125,7 @@
                 <div class="pause-button absolute">
                   <span class="material-icons">pause</span>
                 </div>
+                <% } %>
               </div>
               <div class="product-content flex column gap-xs mt-sm">
                 <img
